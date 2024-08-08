@@ -5,33 +5,29 @@ Aplicação principal
 
 ## Rodando localmente
 
+Alterar o arquivo de configuração rabbitmq.yml(Enviada juntamente com o teste) e database.yml
+
 Renomear .env_sample para .env
 
 ```bash
   mv .env_sample .env
 ```
 
-Build o container
-
-```bash
-  docker compose build
-```
-
 Execute as migrações
 
 ```bash
-  docker compose run web rake db:create
-  docker compose run web rake db:migrate
+  rails db:create
+  rails db:migrate
 ```
 
-Execute o container
+Execute a aplicação
 
 ```bash
-  docker compose up
+  rails s
 ```
 
-Execute os teste unitários
+Em um novo terminar execute os workers
 
 ```bash
-  docker compose run web bash -c "RAILS_ENV=test bundle exec rspec"
+  rake sneakers:run
 ```

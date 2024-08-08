@@ -1,5 +1,5 @@
 default: &default
-  vhost: '/'
+  vhost: 'duuxceka'
   port: 5672
   amqp: 'amqp://guest:guest@172.17.0.3'
 
