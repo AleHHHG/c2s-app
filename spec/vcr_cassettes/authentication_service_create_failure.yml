@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<AUTHENTICATION_SERVICE_URL>/users"
+    body:
+      encoding: UTF-8
+      string: user[email]=alessandro%40teste.com&user[password]=123456&user[name]
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.2.2p53
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '67'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - e5f2aaae-ba57-4281-a658-78aa27c54c0e
+      X-Runtime:
+      - '0.196340'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=1.87, transaction.active_record;dur=2.05,
+        process_action.action_controller;dur=194.09
+      Vary:
+      - Origin
+      Content-Length:
+      - '348'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cActiveRecord::RecordNotUnique:\"PG::UniqueViolation:
+        ERROR:  duplicate key value violates unique constraint \\\"index_users_on_email\\\"\\nDETAIL:  Key
+        (email)=(alessandro@teste.com) already exists.\\n\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[],"Full Trace":[]}}'
+  recorded_at: Wed, 07 Aug 2024 17:47:29 GMT
+recorded_with: VCR 6.2.0

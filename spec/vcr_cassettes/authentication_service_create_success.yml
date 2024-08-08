@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<AUTHENTICATION_SERVICE_URL>/users"
+    body:
+      encoding: UTF-8
+      string: user[email]=alessandro%40teste.com&user[password]=123456&user[name]
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.2.2p53
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '67'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MjgsIm5hbWUiOm51bGwsInN1YiI6IjI4Iiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzIzMDUyODQ5LCJleHAiOjE3MjMwNTY0NDksImp0aSI6IjkwOWM4YmNmLWZlMTgtNDU0Ny1hYWEyLTEzNmVmNjUzMzE4NCJ9.A7Jlx-wl0zJSt7SmQozkQ52cw6lVxwJ1dogydPaRdbY
+      Etag:
+      - W/"2f2a99be8d2471bbbc6921ecbf049589"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 59a85219-5a52-414b-a2a8-fd1d7e4835ab
+      X-Runtime:
+      - '0.206467'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=15.81,
+        transaction.active_record;dur=4.64, process_action.action_controller;dur=204.06
+      Content-Length:
+      - '177'
+    body:
+      encoding: UTF-8
+      string: '{"id":28,"email":"alessandro@teste.com","name":null,"created_at":"2024-08-07T17:47:29.756Z","updated_at":"2024-08-07T17:47:29.756Z","jti":"d6da8b12-59df-439f-b56c-62e430cd4c9f"}'
+  recorded_at: Wed, 07 Aug 2024 17:47:29 GMT
+recorded_with: VCR 6.2.0

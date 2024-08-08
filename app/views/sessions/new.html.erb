@@ -1,0 +1,21 @@
+<div class="login mt-5">
+  <%= form_with url: sessions_url, method: :post do |f| %>
+    <%= image_tag 'logo.png', class: 'logo-login mb-2' %>
+    <% flash.each do |name, msg| %>
+     <div class="alert alert-<%= name == 'error' ? 'danger' : 'success' %> mt-3" role="alert">
+        <%= msg %>
+      </div>
+    <% end %>
+    <h4 class="mb-3 fw-normal">Login</h4>
+    <div class="form-floating">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control ' %>
+      <%= f.label :email, class: 'form-label' %>
+    </div>
+    <div class="form-floating mt-2">
+      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :password, 'Senha', class: 'form-label' %>
+    </div>
+    <%= f.submit "Login", class: 'btn btn-dark w-100 py-2 mt-3 mb-2' %>
+    Não tem um conta? <%= link_to 'Criar usuário', new_registration_path %>
+  <% end %>
+</div>

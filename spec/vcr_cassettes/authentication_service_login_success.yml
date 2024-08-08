@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<AUTHENTICATION_SERVICE_URL>/users/sign_in"
+    body:
+      encoding: UTF-8
+      string: user[email]=alessandro.guedess%40gmail.com&user[password]=123456
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - rest-client/2.1.0 (linux x86_64) ruby/3.2.2p53
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '64'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - localhost:3001
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept, Origin
+      Authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFsZXNzYW5kcm8gR3VlZGVzIiwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTcyMzA0NTc0NywiZXhwIjoxNzIzMDQ5MzQ3LCJqdGkiOiJhZTMxMDQwNy1mMmIxLTQ5OWQtOWE1My1mNzUyZjA3Yjk2ZjkifQ.tR1PL4X2gwb7PFrwEacudnBWRpbJKs_RARahXz_R68M
+      Etag:
+      - W/"a9bb1f83e284377b9d92c85f9c5b3238"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b40f2963-2adc-41cd-be9b-a4a4e13821e5
+      X-Runtime:
+      - '0.324726'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.01, sql.active_record;dur=0.19, instantiation.active_record;dur=0.08,
+        process_action.action_controller;dur=320.22
+      Content-Length:
+      - '275'
+    body:
+      encoding: UTF-8
+      string: '{"token":"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkFsZXNzYW5kcm8gR3VlZGVzIiwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTcyMzA0NTc0NywiZXhwIjoxNzIzMDQ5MzQ3LCJqdGkiOiJhZTMxMDQwNy1mMmIxLTQ5OWQtOWE1My1mNzUyZjA3Yjk2ZjkifQ.tR1PL4X2gwb7PFrwEacudnBWRpbJKs_RARahXz_R68M"}'
+  recorded_at: Wed, 07 Aug 2024 15:49:07 GMT
+recorded_with: VCR 6.2.0

@@ -1,0 +1,22 @@
+<%= form_with(model: task) do |form| %>
+  <% if task.errors.any? %>
+    <div class="alert alert-danger">
+      <h4>O tarefa não pode ser salva:</h4>
+
+      <ul>
+        <% task.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= form.label 'URL para scraping', class: 'form-label' %>
+    <%= form.url_field :url, class: 'form-control'  %>
+  </div>
+
+  <%= form.hidden_field :user_id, value: @current_user[:id] %>
+
+  <%= form.submit 'Salvar', class: 'btn btn-primary mt-3 btn-lg float-end' %>
+<% end %>
+<br clear="all" />

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg border-bottom bg-white">
+  <div class="container">
+    <a class="navbar-brand" href="<%= root_path %>">
+      <%= image_tag 'logo.png', class: 'logo' %>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="dropdown text-end">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+       Olá <%= @current_user[:name] %>
+      </a>
+      <ul class="dropdown-menu">
+        <%= link_to('Sair', logout_sessions_path, class: 'dropdown-item') %>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav"></div>
+  </div>
+</nav>
