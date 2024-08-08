@@ -5,10 +5,10 @@ Aplicação principal
 
 ## Rodando localmente
 
-Renomear .env.sample para .env
+Renomear .env_sample para .env
 
 ```bash
-  mv .env.sample .env
+  mv .env_sample .env
 ```
 
 Build o container
